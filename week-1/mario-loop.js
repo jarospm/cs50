@@ -1,5 +1,5 @@
-//get input for the # of loops
-import { getString } from "./get-string.js";
+//GET INPUT
+import { getString } from "../get-string.js";
 
 let rows;
 let columns;
@@ -17,18 +17,54 @@ do {
 } while (brush.trim() === "" || brush.length > 1);
 
 
-//loop brush over the rows and columns
+//PRINT RECTANGLE
+console.log("PRINTING RECTANGLE")
 
 //print n rows
 for (let i = 0; i < rows; i ++) {
-    paintRow(columns)
+    printRectRow(columns)
 }
 
 //print n of brush (i.e. one row)
-function paintRow(n) {
+function printRectRow(n) {
     let x = "";
     for (let i = 0; i < n; i ++) {
         x += brush;
     }
     console.log(x);
+}
+
+
+//PRINT PYRAMID
+console.log("PRINTING PYRAMID")
+
+for (let i = 1; i <= rows; i ++) {
+    let x = printPyramidLeft(rows, i);
+    x += " ";
+    x += printPyramidRight(i)
+    console.log(x);
+}
+
+// right-aligned pyramid (on the left-hand side)
+function printPyramidLeft(rows, n) {
+    let x = "";
+    // Add spaces
+    for (let i = 0; i < rows - n; i++) {
+        x += " ";
+    }
+
+    // Add brush characters
+    for (let i = 0; i < n; i++) {
+        x += brush;
+    }
+    return x;
+}
+
+// left-aligned pyramid (on the right-hand side)
+function printPyramidRight(n) {
+    let x = "";
+    for (let i = 0; i < n; i ++) {
+        x += brush;
+    }
+    return x;
 }
