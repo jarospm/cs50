@@ -1,5 +1,5 @@
 //GET INPUT
-import { getString } from "../get-string.js";
+import { getString } from "../../get-string.js";
 
 let rows;
 let columns;

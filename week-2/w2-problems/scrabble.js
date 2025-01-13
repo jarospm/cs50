@@ -1,4 +1,4 @@
-import { getString } from "../get-string.js";
+import { getString } from "../../get-string.js";
 
 let wordPlayerOne = await getString("Player 1: ");
 let wordPlayerTwo = await getString("Player 2: ");
@@ -16,7 +16,7 @@ function calcScore(word) {
     for (const char of word.toLowerCase()) {
         // for lowercase letters 'a' to 'z', the ASCII values are 97 to 122
         const letterIndex = char.charCodeAt() - 97;
-        // Add points for this letter to the total score
+        // add points for this letter to the total score
         if (letterIndex >= 0 && letterIndex < 26) { // only score valid letters
             score += points[letterIndex];
         }

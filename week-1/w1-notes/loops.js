@@ -23,7 +23,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 // get input for the # of loops
-import { getString } from "../get-string.js";
+import { getString } from "../../get-string.js";
 
 let reps;
 //Use do-while structure to continues prompting until a valid input is provided.

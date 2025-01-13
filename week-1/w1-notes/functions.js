@@ -1,5 +1,5 @@
 // import getString function
-import { getString } from '../get-string.js';
+import { getString } from '../../get-string.js';
 
 //await makes sure each function completes before moving to the next one
 await greeting();

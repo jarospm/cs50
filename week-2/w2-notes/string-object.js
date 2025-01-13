@@ -1,4 +1,4 @@
-import { getString } from "../get-string.js";
+import { getString } from "../../get-string.js";
 
 let name = await getString("What is your name? ");
 
